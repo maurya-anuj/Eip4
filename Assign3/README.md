@@ -1,80 +1,80 @@
 Assignment 3
 
+
 # Define the model
 model = Sequential()
 
-model.add(SeparableConv2D(32, (3, 3), padding='same', input_shape=(32, 32, 3)))  # 32, 3
-model.add(Activation('relu'))
-model.add(BatchNormalization())
-model.add(SeparableConv2D(64, (3, 3), padding='same'))  # 32, 5
-model.add(Activation('relu'))
-model.add(BatchNormalization())
-model.add(SeparableConv2D(64, (3, 3), padding='same'))  # 32, 7
-model.add(Activation('relu'))
-model.add(BatchNormalization())
-model.add(SeparableConv2D(128, (3, 3), padding='same'))  # 32, 9
-model.add(Activation('relu'))
-model.add(BatchNormalization())
-model.add(SeparableConv2D(128, (3, 3), padding='same'))  # 32, 11
-model.add(Activation('relu'))
-model.add(BatchNormalization())
+model.add(SeparableConv2D(32, (3, 3), padding='same', input_shape=(32, 32, 3)))  # 32, 3\
+model.add(Activation('relu'))\
+model.add(BatchNormalization())\
+model.add(SeparableConv2D(64, (3, 3), padding='same'))  # 32, 5\
+model.add(Activation('relu'))\
+model.add(BatchNormalization())\
+model.add(SeparableConv2D(64, (3, 3), padding='same'))  # 32, 7\
+model.add(Activation('relu'))\
+model.add(BatchNormalization())\
+model.add(SeparableConv2D(128, (3, 3), padding='same'))  # 32, 9\
+model.add(Activation('relu'))\
+model.add(BatchNormalization())\
+model.add(SeparableConv2D(128, (3, 3), padding='same'))  # 32, 11\
+model.add(Activation('relu'))\
+model.add(BatchNormalization())\
 
-model.add(MaxPooling2D(pool_size=(2, 2)))  # 16, 12
+model.add(MaxPooling2D(pool_size=(2, 2)))  # 16, 12\
 model.add(Dropout(0.1))
 
-model.add(Convolution2D(32, 1, activation='relu', use_bias=False))  # 16, 12
+model.add(Convolution2D(32, 1, activation='relu', use_bias=False))  # 16, 12\
 model.add(BatchNormalization())
 
-model.add(SeparableConv2D(32, (3, 3), padding='same'))  # 16, 16
-model.add(Activation('relu'))
-model.add(BatchNormalization())
-model.add(SeparableConv2D(64, (3, 3), padding='same'))  # 16, 20
-model.add(Activation('relu'))
-model.add(BatchNormalization())
-model.add(SeparableConv2D(64, (3, 3), padding='same'))  # 16, 24
-model.add(Activation('relu'))
-model.add(BatchNormalization())
-model.add(SeparableConv2D(64, (3, 3), padding='same'))  # 16, 28
-model.add(Activation('relu'))
-model.add(BatchNormalization())
-model.add(SeparableConv2D(128, (3, 3), padding='same'))  # 16, 32
-model.add(Activation('relu'))
-model.add(BatchNormalization())
+model.add(SeparableConv2D(32, (3, 3), padding='same'))  # 16, 16\
+model.add(Activation('relu'))\
+model.add(BatchNormalization())\
+model.add(SeparableConv2D(64, (3, 3), padding='same'))  # 16, 20\
+model.add(Activation('relu'))\
+model.add(BatchNormalization())\
+model.add(SeparableConv2D(64, (3, 3), padding='same'))  # 16, 24\
+model.add(Activation('relu'))\
+model.add(BatchNormalization())\
+model.add(SeparableConv2D(64, (3, 3), padding='same'))  # 16, 28\
+model.add(Activation('relu'))\
+model.add(BatchNormalization())\
+model.add(SeparableConv2D(128, (3, 3), padding='same'))  # 16, 32\
+model.add(Activation('relu'))\
+model.add(BatchNormalization())\
 
-model.add(MaxPooling2D(pool_size=(2, 2)))  # 8, 34
-model.add(Dropout(0.1))
+model.add(MaxPooling2D(pool_size=(2, 2)))  # 8, 34\
+model.add(Dropout(0.1))\
 
-model.add(Convolution2D(32, 1, activation='relu', use_bias=False))  # 8, 34
-model.add(BatchNormalization())
+model.add(Convolution2D(32, 1, activation='relu', use_bias=False))  # 8, 34\
+model.add(BatchNormalization())\
 
-model.add(SeparableConv2D(32, (3, 3), padding='same'))  # 8, 42
-model.add(Activation('relu'))
-model.add(BatchNormalization())
-model.add(SeparableConv2D(64, (3, 3), padding='same'))  # 8, 50
-model.add(Activation('relu'))
-model.add(BatchNormalization())
-model.add(SeparableConv2D(64, (3, 3), padding='same'))  # 8, 58
-model.add(Activation('relu'))
-model.add(BatchNormalization())
-model.add(SeparableConv2D(64, (3, 3)))  # 6, 66
-model.add(Activation('relu'))
-model.add(BatchNormalization())
-model.add(SeparableConv2D(128, (3, 3)))  # 4, 74
-model.add(Activation('relu'))
-model.add(BatchNormalization())
+model.add(SeparableConv2D(32, (3, 3), padding='same'))  # 8, 42\
+model.add(Activation('relu'))\
+model.add(BatchNormalization())\
+model.add(SeparableConv2D(64, (3, 3), padding='same'))  # 8, 50\
+model.add(Activation('relu'))\
+model.add(BatchNormalization())\
+model.add(SeparableConv2D(64, (3, 3), padding='same'))  # 8, 58\
+model.add(Activation('relu'))\
+model.add(BatchNormalization())\
+model.add(SeparableConv2D(64, (3, 3)))  # 6, 66\
+model.add(Activation('relu'))\
+model.add(BatchNormalization())\
+model.add(SeparableConv2D(128, (3, 3)))  # 4, 74\
+model.add(Activation('relu'))\
+model.add(BatchNormalization())\
 
 
-model.add(Convolution2D(10, 1, use_bias=False)) # 4, 74
-model.add(BatchNormalization())
+model.add(Convolution2D(10, 1, use_bias=False)) # 4, 74\
+model.add(BatchNormalization())\
 
-model.add(GlobalAveragePooling2D())
+model.add(GlobalAveragePooling2D())\
 model.add(Activation('softmax'))
-
-
+''
 
 Epoch 1/50
 
-Epoch 00001: LearningRateScheduler setting learning rate to 0.2.
+Epoch 00001: LearningRateScheduler setting learning rate to 0.2.\
 390/390 [==============================] - 63s 163ms/step - loss: 1.8290 - acc: 0.3102 - val_loss: 13.1181 - val_acc: 0.1067
 Epoch 2/50
 
